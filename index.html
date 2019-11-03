@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>New Employee Details</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<style>
+		body {
+			max-width: 800px;
+			margin: auto;
+		}
+
+		.leading {
+			float: left;
+			width: 6em;
+			margin: auto 0;
+			padding: 0;
+			font-size: 14px;
+		}
+
+		.form-control {
+			min-width: 12em;
+		}
+
+		.signature-size {
+			width: 20em;
+		}
+
+		.group-right {
+			display: block;
+			text-align: right;
+		}
+
+		.space-groups {
+			display: flex;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+
+<body>
+	<section class="container my-5">
+		<div class="row align-items-end">
+			<div class="col-sm-4">
+				<img class="img-fluid xw-25" src="images/logo.png">
+			</div>
+			<div class="col-sm-8 pt-5">
+				<p class="text-right small m-0">Commercial in Confidence</p>
+				<p class="text-right small m-0">Unauthorised Reproduction Prohibited</p>
+			</div>
+		</div>
+	</section>
+
+	<form method="post" name="registration" id="registration" action="https://docusqlapi.azurewebsites.net/api/documents">
+		<div class="container">
+			<h4 class="text-uppercase text-center"><u>New Employee details</u></h4>
+		</div>
+		<div class="container my-5">
+			<div class="row">
+				<div class="col-sm-6 input-group mt-2">
+					<label class="leading" for="firstName">First Name</label>
+					<input class="form-control" type="text" name="firstName" id="firstName" placeholder="John">
+				</div>
+
+				<div class="col-sm-6 input-group mt-2">
+					<label class="leading" for="lastName">Last Name</label>
+					<input class="form-control" type="text" name="lastName" id="lastName" placeholder="Doe">
+				</div>
+
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="fullAddress">Full Address</label>
+					<input class="form-control" type="text" name="fullAddress" id="fullAddress" placeholder="Street Number, District, City, Post No">
+				</div>
+
+				<div class="col-12 input-group mt-2">
+					<label class="leading">Mailing Address</label>
+					<div class="form-check">
+						<input type="checkbox" class="form-check-input" id="asabove" checked>
+						<label class="form-check-label" for="materialChecked2">As above</label>
+					</div>
+				</div>
+
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="emailAddress">Email Address</label>
+					<input class="form-control" type="email" name="emailAddress" id="emailAddress" placeholder="john@doe.com">
+				</div>
+
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="phoneNumber">Phone No</label>
+					<input class="form-control" type="text" name="phoneNumber" id="phoneNumber" placeholder="8889988899">
+				</div>
+
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="citizenshipStatus">Citizonship Status</label>
+					<input class="form-control" type="text" name="citizenshipStatus" id="citizenshipStatus" placeholder="Citizen or Resident?">
+				</div>
+
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="employmentStartDate">Employment Start Date</label>
+					<input class="form-control" type="date" name="employmentStartDate" id="employmentStartDate" placeholder="01/01/2019">
+				</div>
+
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="employmentType">Employment Type</label>
+					<input class="form-control" type="text" name="employmentType" id="employmentType" placeholder="Permernent or Contract?">
+				</div>
+
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="positionTitle">Position Title</label>
+					<input class="form-control" type="text" name="positionTitle" id="positionTitle" placeholder="">
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<h5 class="text-center"><em>Emergency Contact Person:</em></h5>
+		</div>
+		<div class="container my-2">
+			<div class="row">
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="contactName">Name</label>
+					<input class="form-control" type="text" name="contactName" id="contactName" placeholder="">
+				</div>
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="relationship">Relationship</label>
+					<input class="form-control" type="text" name="relationship" id="relationship" placeholder="">
+				</div>
+				<div class="col-12 input-group mt-2">
+					<label class="leading" for="emergrncyPhoneNumber">Phone No</label>
+					<input class="form-control" type="text" name="emergrncyPhoneNumber" id="emergrncyPhoneNumber" placeholder="8889988899">
+				</div>
+			</div>
+		</div>
+
+		<div class="container text-center my-5 py-1 signature-size">
+			<div class="card text-center">
+				<h5 class="card-header">
+					Employee's Signature
+				</h5>
+				<div class="card-body">
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<div class="container space-groups py-5">
+			<div class="btn-group">
+				<button type="submit" id="submit" class="btn btn-primary active">Submit</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" id="savedraft" class="btn btn-secondary ml-2">Save as a draft</button>
+				<button type="button" id="download" class="btn btn-warning ml-2">Download as CSV</button>
+			</div>
+		</div>
+
+	</form>
+
+	<hr>
+
+	<section class="container my-5">
+		<div class="row align-items-end">
+			<div class="col-sm-4 pt-4">
+				<p class="small m-0 text-nowrap">AU Free Phone 1800 305 175</p>
+				<p class="small m-0 text-nowrap">NZ Free Phone 0800 33 55 66</p>
+				<br>
+				<br>
+				<p class="small m-0 text-nowrap">www.SecuredSigning.co.nz</p>
+			</div>
+			<div class="col-sm-4 pt-4">
+				<p class="small m-0 text-nowrap">Level 5, 11 Queens Road</p>
+				<p class="small m-0 text-nowrap">Melbourne Vix 3000</p>
+				<p class="small m-0 text-nowrap">Australia</p>
+				<br>
+				<p class="small m-0 text-nowrap">www.SecuredSigning.co.nz</p>
+			</div>
+			<div class="col-sm-4 pt-4">
+				<p class="small m-0 text-nowrap">Building 2, 5 Ceres Ct. Albany</p>
+				<p class="small m-0 text-nowrap">PO Box 35902, Brown Bay</p>
+				<p class="small m-0 text-nowrap">Auckland, New Zealand</p>
+				<br>
+				<p class="small m-0 text-nowrap">www.SecuredSigning.co.nz</p>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		$(function () {
+			$(document).ready(function () {
+				$("#registration").validate({
+					// Specify validation rules
+					rules: {
+						firstName: "required",
+						lastName: "required",
+						emailAddress: {
+							required: true,
+							email: true
+						},
+						phoneNumber: {
+							required: true,
+							digits: true,
+							minlength: 4,
+							maxlength: 15,
+						},
+						fullAddress: "required",
+						citizenshipStatus: "required",
+						employmentStartDate: "required",
+						employmentType: "required",
+						positionTitle: "required",
+						contactName: "required",
+						relationship: "required",
+						emergrncyPhoneNumber: {
+							required: true,
+							digits: true,
+							minlength: 4,
+							maxlength: 15,
+						},
+					},
+					messages: {
+						firstName: {
+							required: "Please enter first name",
+						},
+						lastName: {
+							required: "Please enter last name",
+						},
+						phoneNumber: {
+							required: "Please enter phone number",
+							digits: "Please enter valid phone number",
+							minlength: "Phone number field accept 3 digits or more",
+							maxlength: "Phone number field accept 15 digits or less",
+						},
+						emailAddress: {
+							required: "Please enter email address",
+							email: "Please enter a valid email address.",
+						},
+					},
+
+				});
+			});
+
+			$('#savedraft').click(function () {
+				alert("The feature hasn't been implemented");
+			});
+
+			$("#download").click(function () {
+				if (!$("#registration").valid()) {
+					alert("Form validation failed.");
+					return;
+				}
+
+				var form = $("#registration")[0];
+				var data = {};
+				for (var i = 0, ii = form.length; i < ii; ++i) {
+					var input = form[i];
+					if (input.name) {
+						data[input.name] = input.value;
+					}
+				}
+				download_csv(data);
+			});
+
+			$("#registration").submit(function (e) {
+				e.preventDefault();
+				if (!$("#registration").valid()) {
+					alert("Form validation failed.");
+					return;
+				}
+				var form = this;
+
+				var data = {};
+				for (var i = 0, ii = form.length; i < ii; ++i) {
+					var input = form[i];
+					if (input.name) {
+						data[input.name] = input.value;
+					}
+				}
+
+				post_registration(form.action, data);
+			});
+
+
+			jQuery.validator.setDefaults({
+				highlight: function (element) {
+					jQuery(element).closest('.form-control').addClass('is-invalid');
+				},
+				unhighlight: function (element) {
+					jQuery(element).closest('.form-control').removeClass('is-invalid');
+				},
+				errorElement: 'text',
+				errorClass: 'text-danger ml-2',
+				errorPlacement: function (error, element) {
+					if (element.parent('.form-control').length) {
+						error.insertAfter(element.parent());
+					} else {
+						error.insertAfter(element);
+					}
+				}
+			});
+
+		})
+	</script>
+
+	<script src="js/download_csv.js"></script>
+	<script src="js/post_registration.js"></script>
+</body>
+
+</html>
